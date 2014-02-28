@@ -50,6 +50,10 @@ func (p *Path) SetPrefix(s string) {
 	p.prefix = s
 }
 
+func (p *Path) GetTimeStamp() time.Time {
+	return p.ts
+}
+
 func (p Path) GetPath() string {
 	x := path.Join(p.path...)
 	x = path.Join(p.prefix, x)
